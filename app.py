@@ -10,7 +10,7 @@ def numero_por_extenso():
         return jsonify({'erro': 'Número não fornecido'}), 400
     
     numero_extenso = num2words(numero, lang='pt_BR')
-    return jsonify({'numero': numero, 'por_extenso': numero_extenso})
+    return jsonify({'numero': numero, 'por_extenso': f'{numero_extenso} Reais'})
 
 if __name__ == '__main__':
     app.run(debug=True)
